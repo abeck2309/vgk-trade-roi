@@ -33,14 +33,14 @@ export type ArticleConfig = {
 };
 
 export const siteConfig = {
-  title: "Golden Edge Analytics",
+  title: "VGK Trade ROI",
   description:
-    "Golden Edge Analytics is focused on Golden Knights analysis across projects, articles, player breakdowns, coaching insights, recaps, and stats.",
+    "A Vegas Golden Knights trade ROI site focused on realized value, future asset value, cap efficiency, and trade context.",
   navigation: [
     { href: "/", label: "Home" },
-    { href: "/projects", label: "Projects" },
-    { href: "/articles", label: "Articles" },
-    { href: "/coming-soon", label: "Coming Soon" },
+    { href: "/methodology", label: "Methodology" },
+    { href: "/dashboards", label: "Dashboards" },
+    { href: "/trade-notes", label: "Trade Notes" },
     { href: "/about", label: "About" }
   ] satisfies NavItem[],
   projects: [
@@ -50,48 +50,16 @@ export const siteConfig = {
       description:
         "A dashboard-led review of Vegas Golden Knights trades through realized player value, future asset value, and cap efficiency.",
       summary:
-        "The first Golden Edge Analytics project studies whether Vegas consistently created value through its biggest front office decisions.",
+        "A standalone Golden Edge Analytics project focused on whether Vegas consistently created value through its front office decisions.",
       status: "Live project",
-      href: "https://goldenedgeanalytics-traderoi.vercel.app/",
-      isExternal: true,
-      imageSrc: "/marner-press-conference.png",
-      imageAlt: "Golden Knights project visual for the VGK Trade ROI site",
+      href: "/",
+      isExternal: false,
+      imageSrc: "/trade-roi-dashboard-preview.png",
+      imageAlt: "Preview of the VGK Trade ROI project",
       tags: ["Tableau", "Hockey analytics", "Trade valuation"]
-    },
-    {
-      title: "NHL Trade Simulator",
-      slug: "nhl-trade-simulator",
-      description:
-        "A live interactive trade lab where users can build rosters, explore transactions across the league, and work through live data-driven team construction scenarios.",
-      summary:
-        "Build the roster you want and test how the numbers hold up.",
-      status: "Live project",
-      href: "https://goldenedgeanalytics-nhltradesim.vercel.app/",
-      isExternal: true,
-      imageSrc: "/hanifin-acquisition.png",
-      imageAlt: "Noah Hanifin acquisition visual for the NHL Trade Simulator project",
-      tags: ["Interactive", "Roster creation", "Live data"]
     }
   ] satisfies ProjectConfig[],
   articles: [
-    {
-      title: "The Tortorella Effect",
-      slug: "the-tortorella-effect",
-      eyebrow: "Article",
-      description:
-        "A look at Vegas under John Tortorella and how the team's pace and overall play have shifted in his first three games behind the bench.",
-      href: "/articles/the-tortorella-effect",
-      readTime: "4/6/26"
-    },
-    {
-      title: "The Golden Knights Emerge Victorious Over Vancouver",
-      slug: "golden-knights-emerge-victorious-over-vancouver",
-      eyebrow: "Article",
-      description:
-        "Vegas completes the season sweep of Vancouver and improves to 4-0-0 under John Tortorella after another important late-season win.",
-      href: "/articles/golden-knights-emerge-victorious-over-vancouver",
-      readTime: "4/8/26"
-    },
     {
       title: "Rethinking VGK Trades: What the Data Actually Says",
       slug: "vgk-trade-roi",
