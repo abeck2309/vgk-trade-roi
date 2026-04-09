@@ -14,9 +14,10 @@ export function HeroPreview() {
           priority
         />
         <div className="absolute inset-x-0 bottom-0 bg-[linear-gradient(180deg,transparent,rgba(7,9,11,0.88))] p-5 md:p-6">
-          <p className="eyebrow">Project Preview</p>
+          <p className="eyebrow">Featured Project</p>
           <p className="mt-2 max-w-md text-sm leading-6 text-frost/90">
-            Snapshot of the site’s visual identity and dashboard-first presentation.
+            Snapshot of the VGK Trade ROI experience, the first project inside the Golden Edge
+            Analytics group.
           </p>
         </div>
       </div>

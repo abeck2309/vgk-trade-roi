@@ -32,8 +32,8 @@ export default function AboutPage() {
     <Container className="space-y-12 pb-20 pt-12 md:space-y-16 md:pt-16">
       <PageIntro
         eyebrow="About"
-        title="A simple profile page for the person behind the project."
-        description="This project sits at the intersection of hockey analytics, financial reasoning, and structured data analysis, with the goal of evaluating Vegas Golden Knights trades more clearly and objectively."
+        title="About Golden Edge Analytics"
+        description="A quick look at the person and ideas behind the site."
       />
 
       <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
@@ -56,7 +56,7 @@ export default function AboutPage() {
           <p className="mt-4 text-sm leading-7 text-mist md:text-base">
             I'm also the creator of the NHL Excellence Index (NEXI), a model designed to identify
             MVP performance using objective metrics and reduce voter bias. This project extends that
-            same approach; combining hockey, analytics, and financial thinking to better evaluate
+            same approach, combining hockey, analytics, and financial thinking to better evaluate
             the true impact of Vegas trades.
           </p>
         </div>

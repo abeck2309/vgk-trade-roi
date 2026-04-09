@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "VGK Trade ROI",
-  description: "A Vegas Golden Knights trade ROI project focused on value, outcomes, and context.",
+  title: siteConfig.title,
+  description: siteConfig.description,
   icons: {
     icon: "/icon.png",
     shortcut: "/icon.png",
@@ -32,6 +34,7 @@ export default function RootLayout({
           <main id="main-content">{children}</main>
           <SiteFooter />
         </div>
+        <Analytics />
       </body>
     </html>
   );

@@ -5,14 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Container } from "@/components/container";
 import { cn } from "@/lib/cn";
-
-const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/methodology", label: "Methodology" },
-  { href: "/dashboards", label: "Dashboards" },
-  { href: "/trade-notes", label: "Trade Notes" },
-  { href: "/about", label: "About" }
-];
+import { siteConfig } from "@/lib/site-config";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -20,7 +13,11 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-white/5 bg-[#090c10]/88 backdrop-blur-xl">
       <Container className="flex flex-col gap-4 py-4 md:flex-row md:items-center md:justify-between">
-        <Link href="/" className="flex items-center gap-3 rounded-md" aria-label="VGK Trade ROI home">
+        <Link
+          href="/"
+          className="flex items-center gap-3 rounded-md"
+          aria-label="Golden Edge Analytics home"
+        >
           <div className="flex h-11 w-11 items-center justify-center overflow-hidden">
             <Image
               src="/vgk-logo.png"
@@ -42,8 +39,10 @@ export function SiteHeader() {
         </Link>
 
         <nav aria-label="Primary" className="flex flex-wrap gap-2">
-          {navItems.map((item) => {
-            const isActive = pathname === item.href;
+          {siteConfig.navigation.map((item) => {
+            const isActive =
+              pathname === item.href ||
+              (item.href !== "/" && pathname.startsWith(`${item.href}/`));
 
             return (
               <Link
